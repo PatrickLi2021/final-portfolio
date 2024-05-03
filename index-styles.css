@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -38,6 +37,7 @@ body {
 
 .container {
     padding: 10px 10%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container img {
@@ -47,8 +47,8 @@ body {
 
 .typewriter {
     font-size: 5em;
-    letter-spacing: 3px;
-    font-family: 'Times New Roman', serif;
+    letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     border-right: 5px solid;
     width: 100%;
     white-space: nowrap;
@@ -70,10 +70,19 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1%;
 }
 
 .logo {
-    width: 140px;
+    width: 50%;
+    font-size: 40px;
+    margin-top: 1%;
+}
+
+.logo h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 50;
 }
 
 nav ul li {
@@ -87,7 +96,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     position: relative;
-    font-family: 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 nav ul li a::after {
@@ -109,19 +118,19 @@ nav ul li a:hover::after {
     margin-top: 20%;
     font-size: 30px;
     width: 53%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .header-text h1 {
     font-size: 80px;
     margin-top: 20px;
     overflow: hidden;
-    font-family: 'Times New Roman', serif;
     font-weight: lighter;
 }
 
 .header-text h1 span {
     color: red;
-    font-family: 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -162,7 +171,7 @@ nav ul li a:hover::after {
     font-size: 60px;
     font-weight: 400;
     color: black;
-    font-family: 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 3%;
 }
 
@@ -271,7 +280,7 @@ nav ul li a:hover::after {
 }
 
 .services-list div:hover {
-    background: #ff004f;
+    background: purple;
     transform: translateY(-10px);
 }
 
@@ -325,10 +334,12 @@ nav ul li a:hover::after {
 .layer h3 {
     font-weight: 800;
     margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .layer p {
     font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .layer a {

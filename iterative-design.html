@@ -6,19 +6,21 @@
     <meta http-equiv="X-UA-compatible" content="IE-edge">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="iterative-design.css">
     <script src="https://kit.fontawesome.com/d006762587.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
         <nav>
-            <img src="assets/logo.png" class="logo">
+            <div class="logo">
+                <h2>Patrick Li.</h2>
+            </div>
             <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Additional Projects</a></li>
+                <!-- <li><a href="#services">Additional Projects</a></li> -->
                 <li><a href="#contact">Contacts</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
@@ -26,16 +28,35 @@
         </nav>
     </div>
 
-    <div>
-        <h1>Iterative Design</h1>
+    <div class="container">
+        <div class="title-container">
+            <div class="colored-square"></div>
+            <div class="title">
+                <h1>Iterative Design</h1>
+                <br>
+                <h2>Allowing Warp Users to Connect, Share Tools, and Build Community</h2>
+            </div>
+        </div>
         <br>
-        <h2>Allowing Warp Users to Connect, Share Tools, and Build Community</h2>
+        <div class="image-container">
+            <img src="assets/warp.png">
+            <img src="assets/warp-terminal.png">
+        </div>
+        <div class="context-container">
+            <div class="colored-square"></div>
+            <div class="context">
+                <h2>Context and Overview:</h2>
+            </div>
+        </div>
         <br>
-        <h2>Context and Overview:</h2>
         <p><em>Warp</em> is a terminal emulator that has been integrated with AI and collaborative tools for better productivity. Some of its most prominent features include the <em>Warp Drive</em> for sharing commands across teams, Warp AI for command suggestions,
             and an IDE. However, one of the main problems with Warp today is that there is no place in the product to connect with other users, share tools, or install extensions.</p>
         <br>
-        <h2>Research:</h2>
+        <div class="research-container">
+            <div class="colored-square"></div>
+            <h2>Research:</h2>
+        </div>
+
         <p>To solve this problem, I worked in a group of 4 to ideate possible solutions, sketch new features, and devise a full-fledged solution to this problem. To begin, we identified the 2 main target groups: <em>creators</em>, who tend to be experienced
             developers who enjoy making tools for others to use, and <em>consumers</em>, who are looking for tools to get a particular task done. The main pain points that we consolidated were that there was no way for users to connect with other Warp
             users and that in order to find specific packages or command line tools, one must leave Warp to find them.</p>
@@ -47,7 +68,10 @@
             <li>A new publishing feature integrated within Warp Drive</li>
         </ul>
 
-        <h2>Process:</h2>
+        <div class="process-container">
+            <div class="colored-square"></div>
+            <h2>Process:</h2>
+        </div>
         <p>To begin, I, along with my teammates, created sketches of 2 different user flows, each consisting of several frames. The first flow featured a more fleshed out profile section on the left panel and also incorporated an additional CLI Tools section
             with mutliple functionalities. In the profile section, users can click and view a list of their own tools, their contributions to other tools, and have the ability to create a new tool from scratch. In the CLI Tools section, users could search
             for a certain tool they need as well as view a list of their favorited tools. This side panel is accessbile directly from the Warp home page.</p>
@@ -78,15 +102,21 @@
         <p>After receiving the feedback, we worked to update our low-fidelity wireframes. I worked primarily on updating the publishing flow. After updating these wireframes, we were ready to move onto creating the final high-fidelity prototypes. I worked
             on designing and constructing the frames for the Publish a Tool flow and also tested and suggested changes to the community and profile flows made by my teammates.</p>
         <br>
-        <h2>Solution:</h2>
+        <div class="solutions-container">
+            <div class="colored-square"></div>
+            <h2>Solution:</h2>
+        </div>
         <p>In the end, we showcased our prototypes to the client and received positive feedback. Our final solution was able to hit on all of the intiial pain points that the client communicated to us. We created a full-fledged community page for users to
             install and rate tools for others all while making it quick and easy for users to locate these tools via a search bar, filters, and auto-generated tags. Additonally, we constructed a Profile section for users to more easily see a list of tools
             they have published and also a count of total downloads and likes. Lastly, the Publish a Tool section allows developers to share the tools they have created with consumers, all in a streamlined portion of the terminal that Warp users already
             have familiarity locating and using.</p>
         <br>
-        <h2>Insights and Learnings</h2>
-        It was a great experience to engage with the full iterative design process with a unique company that presented an interesting challenge for us. This project also gave us a good opportunity to practice building collaborative designs with a team that mirror
-        cross-functional teams in industry.
+        <div class="insights-container">
+            <div class="colored-square"></div>
+            <h2>Insights and Learnings</h2>
+        </div>
+        <p>It was a great experience to engage with the full iterative design process with a unique company that presented an interesting challenge for us. This project also gave us a good opportunity to practice building collaborative designs with a team
+            that mirror cross-functional teams in industry.</p>
 
     </div>
 

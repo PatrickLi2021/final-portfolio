@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="responsive-redesign.css">
+    <script src="https://kit.fontawesome.com/d006762587.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h2>Patrick Li.</h2>
+            </div>
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html/#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <!-- <li><a href="#services">Additional Projects</a></li> -->
+                <li><a href="#contact">Contacts</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="title-container">
+            <div class="colored-square"></div>
+            <div class="title">
+                <h1>Responsive Redesign</h1>
+                <br>
+                <h2>Revamping the Lower Providence Community Library Website</h2>
+            </div>
+        </div>
+        <br>
+
+        <div class="context-container">
+            <div class="colored-square"></div>
+            <h2>Context and Overview:</h2>
+        </div>
+        <p>The goal of this project was to redesign the Lower Providence Community Library website to address usability issues and create a more user-friendly interface. The original website had several flaws related to navigation, layout, accessibility,
+            and user engagement. By redesigning the website, I aimed to enhance user satisfaction and make it easier for visitors to find information, access library resources, and engage with the community.</p>
+        <br>
+
+        <div class="research-container">
+            <div class="colored-square"></div>
+            <h2>Research:</h2>
+        </div>
+        <p>I began by analyzing the existing website of the Lower Providence Community Library to identify usability problems and areas for improvement. Through this analysis, I found several issues related to efficiency, learnability, layout and navigation,
+            memorability, and accessibility. I also considered feedback from potential users, who highlighted the importance of easy navigation, clear information presentation, and accessibility features. The audience for this redesign includes library
+            patrons of all ages who visit the website to access library resources, find information about events, and engage with the community.</p>
+        <br>
+
+        <div class="process-container">
+            <div class="colored-square"></div>
+            <h2>Process:</h2>
+        </div>
+        <h3>Identifying Usability Problems</h3>
+        <p>I analyzed the original website to identify usability problems such as inefficient navigation, unclear layout, and accessibility issues. Problems included a sliding gallery for new releases, unclear event organization, and difficulty registering
+            for a library account.</p>
+        <h3>Sketches:</h3>
+        <p>I performed speed sketching to brainstorm layout options, leading to the creation of wireframes for mobile, tablet, and desktop screens. The wireframes addressed issues like navigation placement, button consistency, and event organization.</p>
+        <h3>High-Fidelity Mockups:</h3>
+        <p>Based on wireframes, I designed high-fidelity mockups for mobile, tablet, and desktop screens, focusing on clarity, consistency, and accessibility. Mockups showcased improved navigation, clearer presentation of information, and enhanced visual
+            appeal.
+        </p>
+        <h3>Visual Redesign</h3>
+        <p>Using HTML and CSS, I developed the responsive final website, ensuring compatibility with different devices and screen sizes. Accessibility features were incorporated, and usability testing was conducted to refine the design. The website passed
+            accessibility checks with zero errors and zero alerts, demonstrating its improved usability and accessibility.</p>
+
+        <div class="solutions-container">
+            <div class="colored-square"></div>
+            <h2>Solution:</h2>
+        </div>
+
+        <p>The redesigned Lower Providence Community Library website addresses usability problems, enhances user experience, and improves engagement. Key features of the solution include: Improved navigation with a fixed top menu for easy access to important
+            sections. Clear presentation of information, including upcoming events, reading challenges, and account registration. Consistent layout and design across different devices, ensuring a seamless user experience. Enhanced accessibility features,
+            such as proper contrast, aria labels, and responsive design. The impact of the redesign is reflected in increased user satisfaction, improved accessibility, and higher engagement with library resources and events.</p>
+
+        <div class="insights-container">
+            <div class="colored-square"></div>
+            <h2>Learnings and Conclusion:</h2>
+        </div>
+        <p>Iterative design process: Iterating on wireframes and mockups helped identify and address usability issues effectively. Importance of accessibility: Incorporating accessibility features from the beginning ensures a more inclusive user experience.
+            User-centered design: Considering user feedback and preferences is crucial for creating a user-friendly interface. Responsive design: Designing for multiple devices requires careful consideration of layout, navigation, and content presentation.</p>
+    </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sideMenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sideMenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sideMenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
