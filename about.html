@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-compatible" content="IE-edge">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="index-styles.css">
+    <link rel="stylesheet" href="about-styles.css">
     <script src="https://kit.fontawesome.com/d006762587.js" crossorigin="anonymous"></script>
 </head>
 
@@ -18,55 +18,59 @@
                     <h2>Patrick Li.</h2>
                 </div>
                 <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#portfolio">My Work</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="index.html#portfolio">My Work</a></li>
                     <!-- <li><a href="#services">Additional Projects</a></li> -->
                     <li><a href="#contact">Contacts</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
-                <p>Software Engineer</p>
-                <h1 class="typewriter">Hi, my name is <span>Patrick</span></h1>
-            </div>
-            <a href="#portfolio" class="btn"><i class="fa-solid fa-angle-down"></i></a>
         </div>
     </div>
-    <!-- --------------------------------------- PORTFOLIO --------------------------------------------------------- -->
-    <div id="portfolio">
+    <!-- ---------------------- ABOUT ------------------------------------ -->
+    <div id="about">
         <div class="container">
-            <h1 class="sub-title"> My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="assets/work-1.png">
-                    <div class="layer">
-                        <h3>Iterative Design</h3>
-                        <p>Designing an Interactive Prototype to Help Warp Users Build Community</p>
-                        <a href="iterative-design.html"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/user.png">
                 </div>
-                <div class="work">
-                    <img src="assets/work-2.png">
-                    <div class="layer">
-                        <h3>Responsive Redesign</h3>
-                        <p>Revamping the Lower Providence Community Library Website</p>
-                        <a href="responsive-redesign.html"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a junior at Brown studying <b>computer science</b> and <b>applied mathematics</b> with a focus on <em>systems</em> and <em>software principles</em>. As someone who enjoys tackling complex challenges with others, my passions lie
+                        in backend development, data engineering, and cloud computing.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="assets/work-3.png">
-                    <div class="layer">
-                        <h3>Bucket List</h3>
-                        <p>Allowing Users to Plan Trips and Vacations</p>
-                        <a href="bucket-list.html"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span><em>Languages</em></span><br>Python, Java, C, C++, Go, JavaScript/TypeScript, SQL, HTML/CSS, MATLAB, R</li>
+                            <li><span><em>Frameworks/Technologies</em></span><br>React, Angular, Express.js, Node.js, MongoDB, AWS, Flask, Django, REST</li>
+                            <li><span><em>Testing/Tools</em></span><br>Git, Linux, Azure DevOps, Selenium, Jest, Axios, Heroku, Firebase, Postman</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <!-- <li><span><em>May 2024 - Aug 2024</em></span><br>Software Engineer Intern @ Comcast</li>
+                            <li><span><em>June 2023 - Aug 2023</em></span><br>Software Engineer Intern @ CarMax</li> -->
+                            <li><span><em>Aug 2023 - Dec 2023</em></span><br>CSCI 1951V Undergraduate Teaching Assistant</li>
+                            <li><span><em>Aug 2022 - Dec 2022</em></span><br>CSCI 0112 Undergraduate Teaching Assistant<br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span><em>2021 - 2025</em></span><br>Brown University</li>
+                            <li><span><em>2017 - 2021</em></span><br>Methacton High School</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <!-- <a href="#" class="btn">See more</a> -->
         </div>
     </div>
+
     <!-- ---------------------------------------- ADDITIONAL PROJECTS --------------------------------------------- -->
     <!-- 
     <div id="services">
@@ -94,23 +98,6 @@
             </div>
         </div>
     </div> -->
-
-    <!-- --------------------------------------------------- CONTACT ------------------------------------------------- -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p> <i class="fa-sharp fa-solid fa-paper-plane"></i> patrick_li@brown.edu</p>
-                    <p> <i class="fa-solid fa-phone"></i> 484-686-9426</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/patrick-li-72a7751aa/"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="contact-right"></div>
-            </div>
-        </div>
-    </div>
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
