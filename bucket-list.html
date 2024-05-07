@@ -10,18 +10,20 @@
     <script src="https://kit.fontawesome.com/d006762587.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="fade-in">
     <div class="container">
         <nav>
             <div class="logo">
-                <h2>Patrick Li.</h2>
+                <a href="index.html">
+                    <h2>Patrick Li.</h2>
+                </a>
             </div>
             <ul id="sidemenu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#portfolio">My Work</a></li>
                 <!-- <li><a href="#services">Additional Projects</a></li> -->
-                <li><a href="#contact">Contacts</a></li>
+                <li><a href="index.html#contact">Contacts</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -48,52 +50,148 @@
                 <h2>Context and Overview:</h2>
             </div>
             <br>
-            <p>The goal of this project was to understand and apply different statistical tests used in design analysis to evaluate the impact of design changes on user interaction. By conducting A/B testing, I aimed to identify which design choices led
-                to improvements in user experience and engagement on a web page. This project is crucial for designers and developers to make informed decisions and create interfaces that effectively meet user needs.</p>
+            <p>This project was the final project of a full stack development course centered around hypertext/hypermedia systems. Throughout the course, I built out various features of a modern hypertext system, including nodes, anchors, links, and editable
+                nodes (in this case, we defined a node as a distinct piece of information within the hypertext system, which could be a document, a page, an image, a video, an audio clip, or any other type of media or resource).</p>
+            <br>
+            <div class="hypertext-cartoon-container">
+                <img src="assets/hypertext-cartoon.jpeg">
+            </div>
+            <br>
+            <p>For this project, I worked in a group of 3 to construct a new travel planner/bucket list application that incorporated destination and route nodes, all situated within a global map view. Within the map, users would be able to place pins on
+                various locations around the world and make routes between different destinations. Lastly, we would supply many other features for the map/node hypertext system such as pinning locations, deleting destinations, etc. The problem that this
+                application was intended to solve was to give users of our hypertext system a way to plan trips and vacations visually while also providing them with traditional annotation features to make notes about different destinations.
+            </p>
             <br>
             <div class="research-container">
                 <div class="colored-square"></div>
                 <h2>Research:</h2>
             </div>
             <br>
-            <p>The research involved understanding the principles of A/B testing and statistical analysis to evaluate the effects of design changes on user interaction. The audience includes designers, developers, and product managers who are interested
-                in optimizing user experience and engagement on digital platforms. They seek insights into how design choices impact user behavior and how to improve usability and efficiency.</p>
+            <p>The target audience for this application woudl be any person who wants to organize a bucket list of destinations and plan trips to these destinations. For example, a Brown student could make a bucket list of destinations in Providence. They
+                could add destinations to their list/map whenever they think of a new place to visit, check off places they've visited, organize their nodes into a Thanksgiving break or spring break travel plan by linking the nodes to form routes, filter
+                locations on their bucket list by city to brainstorm a weekend trip to New York/Boston, or be alerted that they are near a restaurant on their bucket list while walking around Providence.</p>
+            <br>
+            <p>Another user case would be a group of friends who want to create a collaborative bucket list. In this case, each member of the group could add destinations, modify notes about the destinations, check off visite destinations, and create/modify/delete
+                trails.
+            </p>
+            <br>
+            <p>Before we started the project, we first planned out how we would build the application. We started out with a plain hypertext system that only featured anchors, links, and editable nodes. A picture of the front page of this system is shown
+                below:
+            </p>
+            <br>
+            <div class="initial-hypermedia">
+                <img src="assets/initial_hypermedia.png">
+            </div>
+            <br>
+            <p>The front page of our application featured 2 different views of our nodes: <b>tree view</b> and <b>grid view</b>. The first step we wanted to complete was to add a global map feature that would contain all of the nodes/destinations. Because
+                the frontend of this application was built in React/TypeScript, we first had to decide which library we wanted to use to display the map. We ultimately decided to use <em><b>React Leaflet</b></em>, which is a lightweight, mobile-friendly
+                library that makes creating interactive maps easier. We chose this library over others such as Mapbox because it provided more features such as adding markers, displaying lines between pins/nodes, and facilitating user interactions such
+                as panning and zooming.
+            </p>
+            <br>
+            <p>In terms of the specific features themselves, we decided that the hypertext application would allow the user to pin their geographic node (destination) to a central map and link an editable note to a specific destination that is pinned. The
+                user would also be able to highlight the node as either visited or unvisited. To help the user organize their nodes, we decided to add a priority labeling for each node. The priority indicator would have 3 levels: low, medium, and high
+                priority. Each pinned destination would have an associated priority level to it. This would be useful in the case where the user has several destinations and cannot visit all of them in a trip, so they decide to organize them by priority.
+                The tool will then be able to create a trail/route between pinned destinations for the user to plan out their trip. As the user is planning and making changes to their trip, they should be able to delete geographic nodes, which should
+                update the route. Additionally, when the user deletes the route, the nodes themselves should not be changed. To help keep them organized, there will be a filter feature to search pinned destinations by visited status and priority.
+            </p>
+            <br>
+            <div class="figma-container">
+                <img src="assets/figma.png">
+            </div>
             <br>
             <div class="process-container">
                 <div class="colored-square"></div>
                 <h2>Process</h2>
             </div>
             <br>
-            <h3>Data Collection</h3>
-            <p>I was provided with a simple webpage, MedX, and tasked with scheduling an appointment, then I made UI changes to improve interaction. Changes included darkening button colors, adding spacing between appointment slots, and organizing appointments
-                chronologically.
+            <h3>Backend</h3>
+            <p>In terms of backend functionality, our idea was to find a way to store each route in the database since that was one of the new node types that we wanted to add to our project. To do this, we would want to develop a function to make queries
+                to the database in order to store this information.
             </p>
             <br>
-            <h3>Analysis</h3>
-            <p>I created null and alternative hypotheses for misclick rate, time on page, and time to first click. Hypotheses were based on expected improvements in user interaction due to design changes.</p>
+            <h3>Frontend</h3>
+            <p>In order to incorporate geographic nodes, we created a central map via React-Leaflet, which enables markers with position to be pinned on the map and for informational pop-ups to appear when clicking on a marker. Instead of plain text pop-ups,
+                we made the pop-up a linke to an editable note about the location.</p>
             <br>
-            <h3>Predictions about Rejecting the Null Hypothesis</h3>
-            <p>Predicted rejection of null hypotheses based on observed differences between versions A and B. Anticipated improvements in misclick rate, time on page, and time to first click for the modified website.</p>
+            <p>Routes will be saved in the backend through a data structure that keeps track of node order. We decided to create an interface called <b>IRoute</b> to store this data structure on the frontend. Extra fields like the type of destination or
+                whether it has been visited were stored in the Node data structure in our backend.</p>
             <br>
-            <h3>Statistical Tests</h3>
-            <p>Conducted chi-squared test for misclick rate and one-tailed t-tests for time on page and time to first click. Analyzed key metrics including degrees of freedom, t-scores, and p-values</p>
+            <div class="iroute-container">
+                <img src="assets/iroute.png">
+            </div>
+            <br>
+            <p>For filtering, we created a feature that allows you to select the priority, type, region, etc. This involved fetching all the nodes from the backend and returning the ones with fields that match the filters. Each of these nodes adhered to
+                the <b>IDestination</b> interface, which is shown below:</p>
+            <br>
+            <div class="idestination-container">
+                <img src="assets/idestination.png">
+            </div>
+            <br>
+            <h3>My Role</h3>
+            <p>My role in this project was to work on the frontend to get the central map to be displayed for the geographic nodes as well as to add the search and filtering functionalities. In order to get the map displayed, I had to find a way to understand
+                the features of React-Leaflet, such as the MapContainer and different component properties, and get it incorporated into the homepage of our application, which was challenging at first. </p>
+            <br>
+            <p>In order to develop the search and filtering functionalities, I first had to write a backend endpoint in our node router class for both destinations and routes. It worked such that when given a string representing our search term, each function
+                will return a list of nodes that are related to that search term. I used Postman to test the functionality of this new endpoint in the backend. Lastly, for the frontend, I developed and incorporated 2 new search bar components that will
+                make requests to the newly created endpoints and display the results. When the user clicked on a search result, they were navigated to the relevant node.
+            </p>
+            <br>
+            <div class="search-container">
+                <img src="assets/search.png">
+                <img src="assets/search-2.png">
+            </div>
             <br>
             <div class="solutions-container">
                 <div class="colored-square"></div>
                 <h2>Solution and Impact:</h2>
             </div>
             <br>
-            <p>Misclick Rate: Original Website: 30% Modified Website: 15% Decreased misclicks by 50%, indicating improved button visibility and clarity. Time Spent on Page: Original Website: 24,398.29 milliseconds Modified Website: 7,714.48 milliseconds
-                Reduced average time on page by approximately 68%, indicating increased efficiency and user engagement. Time to First Click: Original Website: 12,217.43 milliseconds Modified Website: 4,803 milliseconds Reduced average time to first click
-                by approximately 61%, indicating enhanced user engagement and usability.</p>
+            <p>The final solution has the following impact on its users:
+                <br>
+                <br>
+                <ol>
+                    <li>
+                        <p><b>Travel Planning and Organization: </b></p>
+                        <p>Users have the ability to pin destinations on a map, link notes to those destinations, and assign priorities to them, which can greatly assist them in organizing their trips. This feature allows users to visually plan their journeys,
+                            making it easier to keep track of important locations and associated information.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <p><b>Trip Prioritization: </b></p>
+                        <p>By assigning priority levels to destinations, users can better manage their time and resources. This is particularly useful for travelers with limited time or resources who need to prioritize which destinations to visit first.
+                            For example, a user may have several destinations they want to visit but can only fit a few into their schedule. With priority labels, they can easily identify which destinations are most important.</p>
+                    </li>
+                    <br>
+                    <li>
+                        <p><b>Route Planning and Optimization: </b></p>
+                        <p>The tool's ability to create a trail or route between pinned destinations allows users to plan their trips more efficiently. Users can visualize the best route to take, reducing travel time and ensuring they don't miss any important
+                            stops along the way.</p>
+                    </li>
+                </ol>
+            </p>
             <br>
             <div class="insights-container">
                 <div class="colored-square"></div>
-                <h2>Learnings and Insights</h2>
+                <h2>Learnings and Insights:</h2>
             </div>
             <br>
-            <p>A/B testing is a powerful method for evaluating design changes and improving user experience. Statistical tests like chi-squared and t-tests provide valuable insights into the effectiveness of design choices. Design decisions should be informed
-                by data and user behavior to optimize usability and engagement.</p>
+            <p>Overall, this project was a great way to be exposed to various aspects of full stack development, frontend design, and UI/UX principles:</p>
+            <br>
+            <ul>
+                <p>
+                    <li><b>UI/UX Design Principles:</b> When designing the frontend, I gained experience working with the principles of UI/UX design, such as consistency, simplicity, and responsiveness, to create a smooth and engaging user experience. This
+                        was especially evident when creating the search bar, as I wanted users to have a very intuitive experience gathering results about their destinations.</li>
+                    <br>
+                    <li><b>API Endpoint Design: </b>I learned the importance of clear API documentation, versioning, error handling, and designing endpoints that meet both current and future requirements.</li>
+                    <br>
+                    <li><b>Frontend-Backend Communication: </b> Integrating frontend and backend involves understanding how data flows between the two layers. I was able to learn about the REST communication protocol, handling asynchronous requests, and data
+                        validation to ensure smooth interaction between the frontend and backend.
+                    </li>
+                </p>
+            </ul>
+            <br>
+            <br>
         </div>
     </div>
 

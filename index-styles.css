@@ -51,10 +51,11 @@ body {
     letter-spacing: 1px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-right: 5px solid;
-    width: 114%;
+    width: auto;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 2s steps(18), cursor .4s step-end infinite alternate;
+    animation: typing 2s steps(50), cursor .4s step-end alternate;
+    display: inline-block;
 }
 
 @keyframes typing {
@@ -79,6 +80,11 @@ nav {
     width: 50%;
     font-size: 40px;
     margin-top: 1%;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
 }
 
 .logo h2 {
@@ -197,7 +203,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: rgb(244, 47, 47);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -312,10 +318,11 @@ nav ul li a:hover::after {
     transition: transform 0.5s;
 }
 
-.layer {
+.layer-1 {
     width: 100%;
     height: 0;
-    background: rgba(128, 0, 128, 0.7);
+    background: rgb(137, 65, 208);
+    opacity: 90%;
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -332,20 +339,68 @@ nav ul li a:hover::after {
     color: white;
 }
 
-.layer h3 {
+.layer-2 {
+    width: 100%;
+    height: 0;
+    background: rgb(39, 110, 216);
+    opacity: 90%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 30px;
+    transition: height 0.5s;
+    color: white;
+}
+
+.layer-3 {
+    width: 100%;
+    height: 0;
+    background: rgb(199, 144, 25);
+    opacity: 90%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 30px;
+    transition: height 0.5s;
+    color: white;
+}
+
+.layer-1 h3,
+.layer-2 h3,
+.layer-3 h3 {
     font-weight: 800;
     margin-bottom: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.layer p {
+.layer-1 p,
+.layer-2 p,
+.layer-3 p {
     font-size: 24px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.layer a {
+.layer-1 a,
+.layer-2 a,
+.layer-3 a {
     margin-top: 20px;
-    color: #ff004f;
+    color: rgb(244, 47, 47);
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -360,7 +415,9 @@ nav ul li a:hover::after {
     transform: scale(1.1);
 }
 
-.work:hover .layer {
+.work:hover .layer-1,
+.work:hover .layer-2,
+.work:hover .layer-3 {
     height: 100%;
 }
 
@@ -368,7 +425,7 @@ nav ul li a:hover::after {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid rgb(244, 47, 47);
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -383,7 +440,7 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background: #ff004f;
+    background: rgb(244, 47, 47);
 }
 
 
@@ -445,7 +502,7 @@ nav .fa-solid {
         font-size: 25px;
     }
     nav ul {
-        background: #ff004f;
+        background: rgb(244, 47, 47);
         position: fixed;
         top: 0;
         right: -200px;

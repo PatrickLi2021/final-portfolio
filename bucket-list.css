@@ -1,3 +1,17 @@
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +27,8 @@ body {
 }
 
 body p,
-body ul li {
+body ul li,
+body ol li {
     font-family: 'Assistant', sans-serif;
 }
 
@@ -55,6 +70,11 @@ nav {
 .logo h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 50;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
 }
 
 nav ul li {
@@ -147,58 +167,61 @@ ul li {
     justify-content: center;
 }
 
-.new-features {
+.initial-hypermedia {
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
-.new-features>div {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    margin: 0 5px;
-    border: 1px solid black;
-    box-shadow: 0 0 3px black;
-}
-
-.sketch-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.sketch-container img {
-    width: 55%;
+.initial-hypermedia img {
+    width: 70%;
     height: auto;
+}
+
+.hypertext-cartoon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+
+.hypertext-cartoon-container img {
+    width: 30%;
+    height: auto;
+    box-shadow: 0 0 7px black;
+}
+
+.iroute-container,
+.idestination-container,
+.figma-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iroute-container img,
+.idestination-container img {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.figma-container img {
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
-.solution-images-container {
-    margin: 3%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.solution-images-container img {
-    width: 35%;
+.search-container img {
+    width: 50%;
     height: auto;
-    margin-right: 1%;
-}
-
-.original-library-container {
-    margin: 3%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.original-library-container img {
-    width: 35%;
-    height: auto;
-    margin-right: 1%;
 }
 
 

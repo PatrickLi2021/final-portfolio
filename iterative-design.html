@@ -10,18 +10,20 @@
     <script src="https://kit.fontawesome.com/d006762587.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="fade-in">
     <div class="container">
         <nav>
             <div class="logo">
-                <h2>Patrick Li.</h2>
+                <a href="index.html">
+                    <h2>Patrick Li.</h2>
+                </a>
             </div>
             <ul id="sidemenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#portfolio">My Work</a></li>
                 <!-- <li><a href="#services">Additional Projects</a></li> -->
-                <li><a href="#contact">Contacts</a></li>
+                <li><a href="index.html#contact">Contacts</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -49,17 +51,34 @@
             </div>
         </div>
         <br>
-        <p><em>Warp</em> is a terminal emulator that has been integrated with AI and collaborative tools for better productivity. Some of its most prominent features include the <em>Warp Drive</em> for sharing commands across teams, Warp AI for command suggestions,
-            and an IDE. However, one of the main problems with Warp today is that there is no place in the product to connect with other users, share tools, or install extensions.</p>
+        <p><em>Warp</em> is a terminal emulator that has been integrated with AI and collaborative tools for better productivity. Some of its most prominent features include the Warp Drive for sharing commands across teams, Warp AI for command suggestions,
+            and an IDE. However, one of the main problems with Warp today is that there is no place in the product to connect with other users, share tools, or install extensions. To solve this problem, I worked in a group of 4 to ideate possible fixes,
+            sketch new features, and ultimately devise a full-fledged solution to this problem. Our solution would enable users to connect and share their work with others in an environment that fosters creativity, all while integrated into the current
+            application.
+        </p>
         <br>
         <div class="research-container">
             <div class="colored-square"></div>
             <h2>Research:</h2>
         </div>
         <br>
-        <p>To solve this problem, I worked in a group of 4 to ideate possible solutions, sketch new features, and devise a full-fledged solution to this problem. To begin, we identified the 2 main target groups whom we intended to address with our solution:
-            <b><em>creators</em></b>, who tend to be experienced developers who enjoy making tools for others to use, and <b><em>consumers</em></b>, who are looking for tools to get a particular task done. The main pain points that we consolidated were
-            that there was no way for users to connect with other Warp users and that in order to find specific packages or command line tools, one must leave Warp to find them.</p>
+        <p>To begin, we identified the 2 main target groups whom we intended to address with our solution:
+            <b><em>creators</em></b>, who tend to be experienced developers who enjoy making tools for others to use, and <b><em>consumers</em></b>, who are looking for tools to get a particular task done. </p>
+        <div class="audience-container">
+            <img src="assets/creator.png">
+            <img src="assets/consumer.jpeg">
+        </div>
+
+        <p>The main pain points that we consolidated were the following:</p>
+        <br>
+        <ul>
+            <li>
+                <p>There is no way for users to connect with other Warp users</p>
+            </li>
+            <li>
+                <p>In order to find specific packages or command line tools, one must leave Warp to find them</p>
+            </li>
+        </ul>
         <br>
         <p>After gaining a more in-depth understanding of the problems, pain points, and target audiences, we ultimately decided that we wanted to incorporate 3 new features into the Warp terminal that would help solve these issues. </p>
         <br>
@@ -82,6 +101,11 @@
             <h2>Process:</h2>
         </div>
         <br>
+        <p>This project was divided into 6 different steps: <b>sketching</b>, <b>first iteration low-fidelity wireframing</b>, <b>mid-project check-in and feedback</b>, <b>updating low-fidelity wireframes</b>, <b>high-fidelity prototyping</b>, and the <b>final-founder presentation</b>.
+        </p>
+        <br>
+        <h3>Sketching:</h3>
+        <br>
         <p>To begin, I, along with my teammates, created sketches of 2 different user flows, each consisting of several frames. The first flow featured a more fleshed out profile section on the left panel and also incorporated an additional CLI Tools section
             with mutliple functionalities. In the profile section, users can click and view a list of their own tools, their contributions to other tools, and have the ability to create a new tool from scratch. In the CLI Tools section, users could search
             for a certain tool they need as well as view a list of their favorited tools. This side panel is accessbile directly from the Warp home page.</p>
@@ -94,8 +118,14 @@
             with the tool.</p>
         <br>
         <div class="sketch-container">
-            <img src="assets/sketch-flow-1-1.png">
-            <img src="assets/sketch-flow-1-2.png">
+            <div class="sketch-sub-container">
+                <img src="assets/sketch-1.png">
+                <img src="assets/sketch-2.png">
+            </div>
+            <div class="sketch-sub-container">
+                <img src="assets/sketch-3.png">
+                <img src="assets/sketch-4.png">
+            </div>
         </div>
 
 
@@ -103,20 +133,50 @@
             alternative because the Personal tab already contains the functionalities of publishing a new workflow, notebook, and folder, so providing an additional feature to allow the user to create a new tool as well would more seamlessly integrate
             into the existing platform. </p>
         <br>
+        <h3>First Iteration Low-Fidelity Wireframing:</h3>
+        <br>
         <p>After each group member created their own preliminary sketches of solutions to this problem, we met and discussed some of the features that we wanted to include in the final product as well as some of the tradeoffs of each sketch. One of the main
             items that we wanted to include was a completely separate community page that included an Explore page catered to the user's tool preferences and an option for the user to search for tools they need. We decided on this option because a community
             page would solve the issue of users having to leave the interface to get the tools they need as well as provide a channel for which users can share their creations with others through a centralized location. Additionally, we modified the Profile
             section so that it included a biography section as well as a list of other Warp users who follow you (and vice versa) in order to contribute to a greater sense of community within the platform. Each user would have an aggregated count of likes
             and downloads across all their tools, allowing users to gain recognition for their contributions and allow quicker discoverability of useful content. Lastly, the Publish a Tool section remained largely the same as in my second sketch flow,
             where a user can click on a <em>Publish Tool</em> option directly from the Personal section of their Warp Drive.</p>
+
+        <div class="lofi-container">
+            <div class="lofi-sub-container">
+                <img src="assets/lofi-1.png">
+                <img src="assets/lofi-2.png">
+            </div>
+            <div class="lofi-sub-container">
+                <img src="assets/lofi-3.png">
+                <img src="assets/lofi-4.png">
+            </div>
+        </div>
+        <br>
+        <h3>Mid-Project Check-In and Feedback:</h3>
         <br>
         <p>At this point, we demoed our low-fidelity wireframes to the client and received several points of feedback. Some of these included modiftying the layout of our community page to be vertical and adding a download button for the user to rate/install
             tools. We decided to implement a vertical view for the community page because we felt that it was important to stay consistent with Warp's current layout and avoid any user frustration or confusion with inconsistent formatting. Additionally,
             allowing the users to rate tools gives them an additional channel through which they can interact with tools and help others find the best ones suited for their task. Some other changes that we intended to make included adding a confirmation
             message when the user published a tool as well as creating a section for the user to add various tags to the tool they created to help other users better search for it in the community page.</p>
         <br>
-        <p>After receiving the feedback, we worked to update our low-fidelity wireframes. I worked primarily on updating the publishing flow. After updating these wireframes, we were ready to move onto creating the final high-fidelity prototypes. I worked
-            on designing and constructing the frames for the Publish a Tool flow and also tested and suggested changes to the community and profile flows made by my teammates.</p>
+        <h3>Updating Low-Fidelity Wireframes:</h3>
+        <br>
+        <p>After receiving the feedback, we worked to update our low-fidelity wireframes. I worked primarily on updating the publishing flow. </p>
+        <br>
+        <div class="updated-lofi-container">
+            <div class="updated-lofi-sub-container">
+                <img src="assets/updated-lofi-1.png">
+                <img src="assets/updated_lofi-2.png">
+            </div>
+            <div class="updated-lofi-sub-container">
+                <img src="assets/updated_lofi-3.png">
+                <img src="assets/updated_lofi-4.png">
+            </div>
+        </div>
+
+        <p>After updating these wireframes, we were ready to move onto creating the final high-fidelity prototypes. I worked on designing and constructing the frames for the Publish a Tool flow and also tested and suggested changes to the community and profile
+            flows made by my teammates.</p>
         <br>
         <div class="solutions-container">
             <div class="colored-square"></div>
@@ -128,6 +188,18 @@
             they have published and also a count of total downloads and likes. Lastly, the Publish a Tool section allows developers to share the tools they have created with consumers, all in a streamlined portion of the terminal that Warp users already
             have familiarity locating and using.</p>
         <br>
+        <div class="hifi-container">
+            <div class="hifi-sub-container">
+                <img src="assets/hifi-1.png">
+                <img src="assets/hifi-2.png">
+            </div>
+            <div class="hifi-sub-container">
+                <img src="assets/hifi-3.png">
+                <img src="assets/hifi-4.png">
+            </div>
+        </div>
+
+
         <div class="insights-container">
             <div class="colored-square"></div>
             <h2>Insights and Learnings</h2>

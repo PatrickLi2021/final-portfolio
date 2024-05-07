@@ -1,3 +1,17 @@
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -57,6 +71,11 @@ nav {
     font-weight: 50;
 }
 
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -95,7 +114,7 @@ nav ul li a:hover::after {
 .image-container img {
     max-width: 100%;
     max-height: 100%;
-    width: 50%;
+    width: 40%;
     height: auto;
 }
 
@@ -126,8 +145,8 @@ h2 {
 }
 
 h3 {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: lighter;
 }
 
 p,
@@ -156,12 +175,28 @@ ul li {
     display: flex;
     justify-content: center;
     align-content: center;
+    flex-direction: row;
 }
 
-.sketch-container img {
-    width: 55%;
-    height: auto;
+.speed-sketches-container,
+.final-sketch-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    margin-right: 2%;
+}
+
+.speed-sketches-container img {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+
+.final-sketch-container img {
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 3%;
 }
 
 .solution-images-container {
@@ -188,6 +223,44 @@ ul li {
     width: 35%;
     height: auto;
     margin-right: 1%;
+    border-radius: 10px;
+}
+
+.layout-container,
+.memorability-container,
+.efficiency-container,
+.learnability-container,
+.accessibility-container {
+    border: 1px solid black;
+    padding: 2.5%;
+    border-radius: 10px;
+    width: 70%;
+    background-color: #f7e7d3;
+    box-shadow: 0 0 3px black;
+}
+
+.issues-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.desktop-wireframe img {
+    width: 25%;
+    height: auto;
+}
+
+.desktop-wireframe,
+.style-guide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.style-guide img {
+    width: 50%;
+    height: auto;
 }
 
 

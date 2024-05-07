@@ -10,18 +10,20 @@
     <script src="https://kit.fontawesome.com/d006762587.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="fade-in">
     <div class="container">
         <nav>
             <div class="logo">
-                <h2>Patrick Li.</h2>
+                <a href="index.html">
+                    <h2>Patrick Li.</h2>
+                </a>
             </div>
             <ul id="sidemenu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html/#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#portfolio">My Work</a></li>
                 <!-- <li><a href="#services">Additional Projects</a></li> -->
-                <li><a href="#contact">Contacts</a></li>
+                <li><a href="index.html#contact">Contacts</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -43,8 +45,11 @@
             <h2>Context and Overview:</h2>
         </div>
         <br>
-        <p>The goal of this project was to redesign the Lower Providence Community Library website to address usability issues and create a more user-friendly interface. The original website had several flaws related to navigation, layout, accessibility,
-            and user engagement. By redesigning the website, I aimed to enhance user satisfaction and make it easier for visitors to find information, access library resources, and engage with the community.</p>
+        <p>The Lower Providence Community Library is a public library located in Eagleville, PA in the suburbs of Philadelphia. The goal of this project was to evaluate this website for its accessibility, visual design, responsiveness, and usability and
+            create a more responsive interface using HTML and CSS. Another objective was to brainstorm and complete a full cycle of the design process from sketches to implementation to gain experience with the design process from start to finish.</p>
+
+        <p>The original website had several flaws related to navigation, layout, accessibility, and user engagement. By redesigning the website, I aimed to enhance user satisfaction and make it easier for visitors to find information, access library resources,
+            and engage with the community.</p>
         <br>
 
         <div class="research-container">
@@ -52,9 +57,96 @@
             <h2>Research:</h2>
         </div>
         <br>
-        <p>I began by analyzing the existing website of the Lower Providence Community Library to identify usability problems and areas for improvement. Through this analysis, I found several issues related to efficiency, learnability, layout and navigation,
-            memorability, and accessibility. I also considered feedback from potential users, who highlighted the importance of easy navigation, clear information presentation, and accessibility features. The audience for this redesign includes library
-            patrons of all ages who visit the website to access library resources, find information about events, and engage with the community.</p>
+        <p>I began by analyzing the existing website of the Lower Providence Community Library to identify usability problems and areas for improvement. In order to classifty the issues in a more organized way, I divided them up into 4 main categories: <b>efficiency, layout and navigation, learnability,</b>            and <b>memorability</b>. An overview of the issues is shown below:</p>
+        <br>
+        <div class="issues-container">
+            <div class="efficiency-container">
+                <h3>Efficiency Issues</h3>
+                <br>
+                <ul>
+                    <li>
+                        <p>The user must manually click through different books to see new releases instead of searching for them.</p>
+                    </li>
+                    <li>
+                        <p>The user must manually click through multiple events to find the one they're looking for instead of having them display on the home screen.</p>
+                    </li>
+                    <li>
+                        <p>There are unlabelled images that lead to a lot of unnecessary scrolling and confusion.</p>
+                    </li>
+                    <li>
+                        <p>There’s no easy way for the user to register for a library account directly on the homepage.</p>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="layout-container">
+                <h3>Layout and Navigation Issues</h3>
+                <br>
+                <ul>
+                    <li>
+                        <p>The navigation bar is at the bottom of the page when the user first arrives at the website.</p>
+                    </li>
+                    <li>
+                        <p>The main picture at the top is blurry and should be smaller so users know what they are scrolling down to.</p>
+                    </li>
+                    <li>
+                        <p>The logo for the library at the top of the website is small and doesn’t have a lot of contrast with the background.</p>
+                    </li>
+                    <li>
+                        <p>On an enlarged monitor, the font of the items in the navigation bar is too small.</p>
+                    </li>
+                    <li>
+                        <p>The 4 red action buttons are not the same size and have low color contrast against their background.</p>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="learnability-container">
+                <h3>Learnability Issues</h3>
+                <br>
+                <ul>
+                    <li>
+                        <p>The location of the library events in a submenu item doesn't help users to remember where to locate events.</p>
+                    </li>
+                    <li>
+                        <p>There is no easy way for the users to locate how to log into their account.</p>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="memorability-container">
+                <h3>Memorability Issues</h3>
+                <br>
+                <ul>
+                    <li>
+                        <p>Some headings, such as “Welcome to the Library!” on the main page, are not centered.</p>
+                    </li>
+                    <li>
+                        <p>There is no page layout consistency for the Adult Services, Child Services, and Teen Services pages.</p>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="accessibility-container">
+                <h3>Accessibility Issues</h3>
+                <br>
+                <ul>
+                    <li>
+                        <p>The main header of the webpage has low contrast against its background picture. </p>
+                    </li>
+                    <li>
+                        <p>There is a sliding gallery in the main body of the web page that contains 2 pictures without any alternative text and several instances of redundant title text or small title text. </p>
+                    </li>
+                    <li>
+                        <p>
+                            A lot of the text on the navigation bar or on the main body is too small for the user to easily read and there is some text that is cut off on a mobile device.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <br>
         <br>
 
         <div class="process-container">
@@ -62,11 +154,7 @@
             <h2>Process:</h2>
         </div>
         <br>
-        <h3>Identifying Usability Problems</h3>
-        <p>I analyzed the original website to identify usability problems such as inefficient navigation, unclear layout, and accessibility issues. Problems included a sliding gallery for new releases, unclear event organization, and difficulty registering
-            for a library account.</p>
-        <br>
-
+        <p>Here are some images of what the original library website looked like:</p>
         <div class="original-library-container">
             <img src="assets/library-1.png">
             <img src="assets/library-2.png">
@@ -74,42 +162,102 @@
         </div>
 
         <h3>Sketches:</h3>
-        <p>I performed speed sketching to brainstorm layout options, leading to the creation of wireframes for mobile, tablet, and desktop screens. The wireframes addressed issues like navigation placement, button consistency, and event organization.</p>
+        <br>
+        <p>To brainstorm some alterantive designs and illustrate some initial ideas, I performed speed sketching to experiment with several designs. The nine sketches that I created helped me think about many different layouts and compare attributes across
+            them. Some attributes that I wanted to include in the final sketch were having the navigation bar stick to hte top of the page, making each button the same dimensions, and include the upcoming events on the homepage. From this deliberation,
+            I came to a final sketch as well.</p>
+        <br>
+
+        <div class="sketch-container">
+            <div class="speed-sketches-container">
+                <img src="assets/speed-sketches.jpg">
+                <h4>Speed Sketches</h4>
+            </div>
+            <div class="final-sketch-container">
+                <img src="assets/final_sketch.jpg">
+                <h4>Final Sketch</h4>
+            </div>
+        </div>
+        <br>
+        <h3>Low-Fidelity Wireframing:</h3>
+        <br>
+        <p>Using my final sketch as a reference, I proceeded to create 3 wireframes for each screen size (mobile, tablet, and desktop). Each wireframe contained the same content and was designed in a way that made information accessible to the user in an
+            intuitive way, even on smaller screens. Below, I have pictured the desktop low-fidelity wireframe, which contains the same components as the other ones.</p>
+        <br>
+        <div class="desktop-wireframe">
+            <img src="assets/desktop_lofi_wireframe.png">
+        </div>
+        <p>Some key features of this design include:</p>
+        <br>
+        <ul>
+            <li>
+                <p><b>Library Name: </b>The name of the library is bolded against a faint background so that users have better memorability of the title page.</p>
+            </li>
+            <li>
+                <p><b>Logo: </b>The logo is at the top left of the screen so that it's the first thing that users see when they load the web page.</p>
+            </li>
+            <li>
+                <p> <b>Navigation Menu: </b>The wireframes put the nav bar at the top of the screen, making locating the nav bar more intuitive than at the bottom. On a mobile device, the nav bar will be oriented vertically instead of horizontally.</p>
+            </li>
+            <li>
+                <p><b>Welcome Message: </b>The “Welcome to the Library!” title is also bolded and centered to improve memorability and create a sense of symmetry and hierarchy.</p>
+            </li>
+            <li>
+                <p><b>Buttons: </b>The 4 main buttons are all the same size and have enough spacing to see each line of text clearly.</p>
+            </li>
+            <li>
+                <p><b>Newest Book Arrivals: </b>The latest books to have arrived are more neatly organized and have a search option for users to quickly look up books.</p>
+            </li>
+            <li>
+                <p><b>Reading Challenges: </b>The reading challenges section has its widgets organized vertically and is not as spaced out as the original website.</p>
+            </li>
+            <li>
+                <p><b>Upcoming Events: </b>Instead of putting the upcoming events on a Google Calendar in one of the menu tabs, this feature can show the most imminent upcoming events that is automatically updated and then have the rest on the calendar.
+                    On the mobile and tablet versions, they will be organized in a column to incorporate responsiveness.</p>
+            </li>
+        </ul>
+        <br>
+        <h3>Visual Design Style Guide:</h3>
+        <br>
+        <p>After making the low-fidelity wireframes, I created a visual design style guide in order to better organize the different icons, fonts, colors, and typography that would be needed for the final designs.</p>
+        <br>
+        <div class="style-guide">
+            <img src="assets/visual_design_guide.png">
+        </div>
         <br>
         <h3>High-Fidelity Mockups:</h3>
-        <p>Based on wireframes, I designed high-fidelity mockups for mobile, tablet, and desktop screens, focusing on clarity, consistency, and accessibility. Mockups showcased improved navigation, clearer presentation of information, and enhanced visual
-            appeal.
+        <br>
+        <p>Next, I designed 3 high fidelity mockups that represent the final, polished look of the new website. Each of the 3 mockups are based on their low-fidelity counterparts and were created using the visual design style guide. The overall layout is
+            shown below:
         </p>
         <br>
-        <h3>Visual Redesign</h3>
-        <p>Using HTML and CSS, I developed the responsive final website, ensuring compatibility with different devices and screen sizes. Accessibility features were incorporated, and usability testing was conducted to refine the design. The website passed
-            accessibility checks with zero errors and zero alerts, demonstrating its improved usability and accessibility.</p>
+        <div class="solution-images-container">
+            <img src="assets/library-redesign.png">
+            <img src="assets/library-redesign-2.png">
+            <img src="assets/library-redesign-3.png">
+        </div>
         <br>
         <div class="solutions-container">
             <div class="colored-square"></div>
             <h2>Solution:</h2>
         </div>
         <br>
-        <p>The redesigned Lower Providence Community Library website addresses usability problems, enhances user experience, and improves engagement. Key features of the solution include: Improved navigation with a fixed top menu for easy access to important
-            sections. Clear presentation of information, including upcoming events, reading challenges, and account registration. Consistent layout and design across different devices, ensuring a seamless user experience. Enhanced accessibility features,
-            such as proper contrast, aria labels, and responsive design. The impact of the redesign is reflected in increased user satisfaction, improved accessibility, and higher engagement with library resources and events.</p>
-
-        <div class="solution-images-container">
-            <img src="assets/library-redesign.png">
-            <img src="assets/library-redesign-2.png">
-            <img src="assets/library-redesign-3.png">
-        </div>
-
+        <p>Using HTML and CSS, I developed the responsive final website, ensuring compatibility with different devices and screen sizes. The website passed accessibility checks with zero errors and zero alerts, demonstrating its improved usability and accessibility.
+            The final website can be found at the following link: <a href="https://patrickli2021.github.io/responsive-redesign-website/"> Lower Providence Community Library</a>.</p>
+        </p>
+        <br>
         <br>
         <div class="insights-container">
             <div class="colored-square"></div>
             <h2>Learnings and Conclusion:</h2>
         </div>
         <br>
-        <p>Iterative design process: Iterating on wireframes and mockups helped identify and address usability issues effectively. Importance of accessibility: Incorporating accessibility features from the beginning ensures a more inclusive user experience.
-            User-centered design: Considering user feedback and preferences is crucial for creating a user-friendly interface. Responsive design: Designing for multiple devices requires careful consideration of layout, navigation, and content presentation.</p>
+        <p>This project gave me great exposure to the iterative design process. Iterating on wireframes and mockups taught me how to identify and address usability issues effectively. Additioanlly, I gained a deeper understanding about the importance of
+            accessibility and how to incorporate accessible features from the beginning from the beginning to create a more inclusive user experience. Lastly, I was able to practice performing responsive design using HTML and CSS. Designing for multiple
+            devices requires careful consideration of layout, navigation, and content presentation and I was able to hone my skills in those areas.</p>
     </div>
     </div>
+    <br>
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");

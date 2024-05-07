@@ -75,6 +75,11 @@ nav {
     font-weight: 50;
 }
 
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
 nav ul li {
     display: inline-block;
     list-style: none;
