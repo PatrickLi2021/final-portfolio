@@ -146,8 +146,9 @@ h2 {
 }
 
 h3 {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 p,
@@ -227,6 +228,17 @@ ul li {
 #project-type {
     font-size: 28px;
     font-weight: normal;
+}
+
+.wanderlog-container img {
+    width: 50%;
+    height: auto;
+}
+
+.wanderlog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

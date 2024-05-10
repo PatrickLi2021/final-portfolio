@@ -47,7 +47,7 @@
                 <img src="assets/bucket-list.png">
             </div>
             <br>
-
+            <br>
             <div class="context-container">
                 <div class="colored-square"></div>
                 <h2>Context and Overview:</h2>
@@ -61,9 +61,10 @@
             </div>
             <br>
             <p>For this project, I worked in a group of 3 to construct a new travel planner/bucket list application that incorporated destination and route nodes, all situated within a global map view. Within the map, users would be able to place pins on
-                various locations around the world and make routes between different destinations. Lastly, we would supply many other features for the map/node hypertext system such as pinning locations, deleting destinations, etc. The problem that this
+                various locations around the world and make routes between different destinations. Lastly, we would supply many other features for the map/node hypertext system, such as pinning locations, deleting destinations, etc. The problem that this
                 application was intended to solve was to give users of our hypertext system a way to plan trips and vacations visually while also providing them with traditional annotation features to make notes about different destinations.
             </p>
+            <br>
             <br>
             <div class="research-container">
                 <div class="colored-square"></div>
@@ -72,9 +73,13 @@
             <br>
             <p>The target audience for this application woudl be any person who wants to organize a bucket list of destinations and plan trips to these destinations. For example, a Brown student could make a bucket list of destinations in Providence. They
                 could add destinations to their list/map whenever they think of a new place to visit, check off places they've visited, organize their nodes into a Thanksgiving break or spring break travel plan by linking the nodes to form routes, filter
-                locations on their bucket list by city to brainstorm a weekend trip to New York/Boston, or be alerted that they are near a restaurant on their bucket list while walking around Providence.</p>
+                locations on their bucket list by city to brainstorm a weekend trip to New York/Boston, or be alerted that they are near a restaurant on their bucket list while walking around Providence. This is similar to the Wanderlog travel planner.</p>
             <br>
-            <p>Another user case would be a group of friends who want to create a collaborative bucket list. In this case, each member of the group could add destinations, modify notes about the destinations, check off visite destinations, and create/modify/delete
+            <div class="wanderlog-container">
+                <img src="assets/wanderlog.png">
+            </div>
+            <br>
+            <p>Another user case would be a group of friends who want to create a collaborative bucket list. In this case, each member of the group could add destinations, modify notes about the destinations, check off visited destinations, and create/modify/delete
                 trails.
             </p>
             <br>
@@ -87,16 +92,14 @@
             </div>
             <br>
             <p>The front page of our application featured 2 different views of our nodes: <b>tree view</b> and <b>grid view</b>. The first step we wanted to complete was to add a global map feature that would contain all of the nodes/destinations. Because
-                the frontend of this application was built in React/TypeScript, we first had to decide which library we wanted to use to display the map. We ultimately decided to use <em><b>React Leaflet</b></em>, which is a lightweight, mobile-friendly
-                library that makes creating interactive maps easier. We chose this library over others such as Mapbox because it provided more features such as adding markers, displaying lines between pins/nodes, and facilitating user interactions such
-                as panning and zooming.
+                the frontend of this application was built in React, we first had to decide which library we wanted to use to display the map. We ultimately decided to use <em><b>React Leaflet</b></em>, which is a lightweight, mobile-friendly library
+                that makes creating interactive maps easier. We chose this library over others such as Mapbox because it provided more features such as adding markers, displaying lines between pins/nodes, and facilitating user interactions such as panning.
             </p>
             <br>
-            <p>In terms of the specific features themselves, we decided that the hypertext application would allow the user to pin their geographic node (destination) to a central map and link an editable note to a specific destination that is pinned. The
-                user would also be able to highlight the node as either visited or unvisited. To help the user organize their nodes, we decided to add a priority labeling for each node. The priority indicator would have 3 levels: low, medium, and high
-                priority. Each pinned destination would have an associated priority level to it. This would be useful in the case where the user has several destinations and cannot visit all of them in a trip, so they decide to organize them by priority.
-                The tool will then be able to create a trail/route between pinned destinations for the user to plan out their trip. As the user is planning and making changes to their trip, they should be able to delete geographic nodes, which should
-                update the route. Additionally, when the user deletes the route, the nodes themselves should not be changed. To help keep them organized, there will be a filter feature to search pinned destinations by visited status and priority.
+            <p>In terms of the features themselves, we decided that the application would allow the user to pin their node (destination) to a central map and link an editable note to a specific destination that is pinned. The user can also highlight the
+                node as visited or unvisited. <br><br> To help the user organize their nodes, we decided to add a priority for each node with 3 levels: low, medium, and high. This would be useful in the case where the user has several destinations and
+                cannot visit all of them. The tool will then be able to create a route between pinned destinations for the user to plan out their trip. <br><br> As the user is planning and making changes to their trip, they should be able to delete nodes,
+                which should update the route. Additionally, when the user deletes the route, the nodes themselves should not be changed. To help keep them organized, there will be a filter feature to search pinned destinations by visited status and priority.
             </p>
             <br>
             <div class="figma-container">
@@ -109,13 +112,15 @@
             </div>
             <br>
             <h3>Backend</h3>
+            <br>
             <p>In terms of backend functionality, our idea was to find a way to store each route in the database since that was one of the new node types that we wanted to add to our project. To do this, we would want to develop a function to make queries
                 to the database in order to store this information.
             </p>
             <br>
             <h3>Frontend</h3>
-            <p>In order to incorporate geographic nodes, we created a central map via React-Leaflet, which enables markers with position to be pinned on the map and for informational pop-ups to appear when clicking on a marker. Instead of plain text pop-ups,
-                we made the pop-up a linke to an editable note about the location.</p>
+            <br>
+            <p>In order to incorporate geographic nodes, we created a central map via React-Leaflet, which enables markers with their position to be pinned on the map and for informational pop-ups to appear when clicking on a marker. Instead of plain text
+                pop-ups, we made the pop-up a link to an editable note about the location.</p>
             <br>
             <p>Routes will be saved in the backend through a data structure that keeps track of node order. We decided to create an interface called <b>IRoute</b> to store this data structure on the frontend. Extra fields like the type of destination or
                 whether it has been visited were stored in the Node data structure in our backend.</p>
@@ -132,6 +137,7 @@
             </div>
             <br>
             <h3>My Role</h3>
+            <br>
             <p>My role in this project was to work on the frontend to get the central map to be displayed for the geographic nodes as well as to add the search and filtering functionalities. In order to get the map displayed, I had to find a way to understand
                 the features of React-Leaflet, such as the MapContainer and different component properties, and get it incorporated into the homepage of our application, which was challenging at first. </p>
             <br>
@@ -145,6 +151,7 @@
                 <img src="assets/search-2.png">
             </div>
             <br>
+            <br>
             <div class="solutions-container">
                 <div class="colored-square"></div>
                 <h2>Solution and Impact:</h2>
@@ -153,7 +160,7 @@
             <p>The final solution has the following impact on its users:
                 <br>
                 <br>
-                <ol>
+                <ul>
                     <li>
                         <p><b>Travel Planning and Organization: </b></p>
                         <p>Users have the ability to pin destinations on a map, link notes to those destinations, and assign priorities to them, which can greatly assist them in organizing their trips. This feature allows users to visually plan their journeys,
@@ -171,8 +178,9 @@
                         <p>The tool's ability to create a trail or route between pinned destinations allows users to plan their trips more efficiently. Users can visualize the best route to take, reducing travel time and ensuring they don't miss any important
                             stops along the way.</p>
                     </li>
-                </ol>
+                </ul>
             </p>
+            <br>
             <br>
             <div class="insights-container">
                 <div class="colored-square"></div>
