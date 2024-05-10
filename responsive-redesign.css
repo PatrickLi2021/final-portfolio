@@ -283,6 +283,12 @@ ul li {
     height: auto;
 }
 
+h4 {
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
 
 /* ------------------------------------------------- MEDIA QUERIES ----------------------------------------- */
 

@@ -62,7 +62,7 @@ body {
         width: 0
     }
     to {
-        width: 100%
+        width: 95%
     }
 }
 
@@ -128,7 +128,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 {
-    font-size: 72px;
+    font-size: 66px;
     margin-top: 20px;
     overflow: hidden;
     font-weight: lighter;
