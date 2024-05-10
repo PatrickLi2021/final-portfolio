@@ -145,14 +145,14 @@ h2 {
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: lighter;
 }
 
 p,
 ul li {
     line-height: 1.4;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .new-features {
@@ -188,13 +188,13 @@ ul li {
 }
 
 .speed-sketches-container img {
-    width: 50%;
+    width: 60%;
     border-radius: 10px;
     margin-bottom: 3%;
 }
 
 .final-sketch-container img {
-    width: 60%;
+    width: 75%;
     border-radius: 10px;
     margin-bottom: 3%;
 }
@@ -239,19 +239,39 @@ ul li {
     box-shadow: 0 0 3px black;
 }
 
-.issues-container {
+.issues-container,
+.lofi-wireframe-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.desktop-wireframe img {
+.desktop-wireframe-container,
+.tablet-wireframe-container,
+.mobile-wireframe-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-wireframe-container img {
+    width: 90%;
+    height: auto;
+}
+
+.tablet-wireframe-container img {
     width: 25%;
     height: auto;
 }
 
-.desktop-wireframe,
+.mobile-wireframe-container img {
+    width: 20%;
+    height: auto;
+}
+
+.lofi-wireframe,
 .style-guide {
     display: flex;
     align-items: center;
@@ -259,7 +279,7 @@ ul li {
 }
 
 .style-guide img {
-    width: 50%;
+    width: 60%;
     height: auto;
 }
 

@@ -161,19 +161,20 @@ h2 {
 h3 {
     font-size: 28px;
     font-weight: lighter;
-    margin-left: 3.25%;
+    margin-left: 3%;
 }
 
 p,
 ul li {
     line-height: 1.4;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 3%;
 }
 
 .new-features {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -188,6 +189,7 @@ ul li {
 }
 
 .sketch-container,
+.second-sketch-container,
 .lofi-container,
 .updated-lofi-container,
 .hifi-container {
@@ -195,6 +197,7 @@ ul li {
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    margin-left: 3%;
 }
 
 .sketch-sub-container {
@@ -210,6 +213,12 @@ ul li {
     height: auto;
     margin-top: 3%;
     margin-bottom: 3%;
+    box-shadow: 0 0 7px black;
+}
+
+.second-sketch-container img {
+    width: 55%;
+    height: auto;
     box-shadow: 0 0 7px black;
 }
 
@@ -237,6 +246,10 @@ ul li {
     list-style-type: none;
     counter-reset: my-counter;
     font-family: 'Assistant', sans-serif;
+}
+
+#project-type {
+    margin-left: 0%;
 }
 
 

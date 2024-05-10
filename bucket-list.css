@@ -153,7 +153,7 @@ h3 {
 p,
 ul li {
     line-height: 1.4;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .images-container img {
@@ -222,6 +222,11 @@ ul li {
 .search-container img {
     width: 50%;
     height: auto;
+}
+
+#project-type {
+    font-size: 28px;
+    font-weight: normal;
 }
 
 

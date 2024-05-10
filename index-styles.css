@@ -50,10 +50,9 @@ body {
     font-size: 5em;
     letter-spacing: 1px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-right: 5px solid;
-    /* width: auto; */
     white-space: nowrap;
     overflow: hidden;
+    border-right: 5px solid;
     animation: typing 2.5s steps(50), cursor .4s step-end alternate;
     display: inline-block;
 }
@@ -63,7 +62,7 @@ body {
         width: 0
     }
     to {
-        width: 115%
+        width: 100%
     }
 }
 
@@ -129,7 +128,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 {
-    font-size: 80px;
+    font-size: 72px;
     margin-top: 20px;
     overflow: hidden;
     font-weight: lighter;
