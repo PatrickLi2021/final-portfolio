@@ -51,10 +51,10 @@ body {
     letter-spacing: 1px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-right: 5px solid;
-    width: auto;
+    /* width: auto; */
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 2s steps(50), cursor .4s step-end alternate;
+    animation: typing 2.5s steps(50), cursor .4s step-end alternate;
     display: inline-block;
 }
 
@@ -63,7 +63,7 @@ body {
         width: 0
     }
     to {
-        width: 100%
+        width: 115%
     }
 }
 
