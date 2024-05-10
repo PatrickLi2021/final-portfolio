@@ -430,12 +430,13 @@ nav ul li a:hover::after {
     text-decoration: none;
     color: black;
     transition: background 0.5s;
-    margin-top: 15%;
+    margin-top: 12%;
 }
 
 .fa-solid.fa-angle-down {
     width: 100%;
     height: auto;
+    bottom: 15%;
 }
 
 .btn:hover {
